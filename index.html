@@ -1,246 +1,307 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SANA Learning | Learn. Grow. Build.</title>
-  <meta name="description" content="SANA Learning — practical education, personal development and professional skills.">
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #f7f8f6;
-      color: #1f2925;
-      line-height: 1.6;
-    }
+<title>SANA Learning | Learn. Grow. Build.</title>
 
-    header {
-      background: #0d5c45;
-      color: white;
-      text-align: center;
-      padding: 70px 20px;
-    }
+<meta name="description" content="SANA Learning offers structured learning programs for personal development, practical skills and meaningful growth.">
 
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f8f6;
+    color: #1f2925;
+    line-height: 1.6;
+}
+
+header {
+    background: #0d5c45;
+    color: white;
+    text-align: center;
+    padding: 75px 20px;
+}
+
+header h1 {
+    font-size: 46px;
+    margin-bottom: 12px;
+}
+
+header p {
+    font-size: 21px;
+    max-width: 760px;
+    margin: auto;
+}
+
+.hero-button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 30px;
+    background: white;
+    color: #0d5c45;
+    text-decoration: none;
+    border-radius: 9px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 65px 20px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+.intro {
+    max-width: 780px;
+    margin: 0 auto 42px;
+    text-align: center;
+    color: #59635f;
+    font-size: 18px;
+}
+
+.programs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 32px 28px;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+}
+
+.card h3 {
+    color: #0d5c45;
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.card p {
+    margin-bottom: 15px;
+}
+
+.price {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 8px 0 20px;
+}
+
+.button {
+    display: block;
+    margin-top: auto;
+    padding: 13px 18px;
+    background: #0d5c45;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.complete {
+    border: 2px solid #0d5c45;
+    position: relative;
+}
+
+.badge {
+    display: inline-block;
+    width: fit-content;
+    background: #e7f3ee;
+    color: #0d5c45;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 14px;
+}
+
+.about {
+    background: #eaf0ed;
+}
+
+.about p {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    font-size: 18px;
+}
+
+footer {
+    background: #15352b;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+@media (max-width: 600px) {
     header h1 {
-      font-size: 44px;
-      margin-bottom: 10px;
+        font-size: 38px;
     }
 
     header p {
-      font-size: 20px;
-      max-width: 700px;
-      margin: auto;
-    }
-
-    .hero-button {
-      display: inline-block;
-      margin-top: 28px;
-      padding: 14px 28px;
-      background: white;
-      color: #0d5c45;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
+        font-size: 19px;
     }
 
     section {
-      max-width: 1100px;
-      margin: auto;
-      padding: 60px 20px;
+        padding: 50px 18px;
     }
-
-    h2 {
-      text-align: center;
-      font-size: 32px;
-      margin-bottom: 15px;
-    }
-
-    .intro {
-      max-width: 760px;
-      margin: 0 auto 40px;
-      text-align: center;
-      color: #53615b;
-    }
-
-    .courses {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background: white;
-      padding: 28px;
-      border-radius: 14px;
-      box-shadow: 0 4px 18px rgba(0,0,0,0.07);
-    }
-
-    .card h3 {
-      color: #0d5c45;
-      margin-bottom: 12px;
-      font-size: 23px;
-    }
-
-    .price {
-      font-size: 26px;
-      font-weight: bold;
-      margin: 18px 0;
-    }
-
-    .card a {
-      display: block;
-      text-align: center;
-      background: #0d5c45;
-      color: white;
-      text-decoration: none;
-      padding: 12px;
-      border-radius: 7px;
-      margin-top: 18px;
-      font-weight: bold;
-    }
-
-    .complete {
-      border: 2px solid #0d5c45;
-    }
-
-    .philosophy {
-      background: #eaf2ee;
-      text-align: center;
-    }
-
-    .philosophy p {
-      max-width: 760px;
-      margin: auto;
-      font-size: 18px;
-    }
-
-    footer {
-      background: #17231f;
-      color: white;
-      text-align: center;
-      padding: 35px 20px;
-    }
-
-    footer a {
-      color: white;
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 36px;
-      }
-
-      header {
-        padding: 55px 20px;
-      }
-    }
-  </style>
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <h1>SANA Learning</h1>
-  <p>Structured learning for reflection, responsibility and meaningful personal growth.</p>
+    <h1>SANA Learning</h1>
 
-  <a class="hero-button"
-     href="https://linkos.bio/sanalearningglobal"
-     target="_blank">
-     Explore SANA
-  </a>
+    <p>
+        Structured learning for reflection, responsibility
+        and meaningful personal growth.
+    </p>
+
+    <a class="hero-button" href="#programs">
+        Explore SANA
+    </a>
 </header>
 
-<section>
-  <h2>Choose Your Path</h2>
 
-  <p class="intro">
-    SANA Learning offers structured programs designed to turn reflection
-    into practical personal development. Learn at your own pace and choose
-    the path that fits your current stage.
-  </p>
+<section id="programs">
 
-  <div class="courses">
+    <h2>Choose Your Path</h2>
 
-    <div class="card">
-      <h3>FOUNDATION</h3>
-      <p>Build the foundations for responsibility, awareness and meaningful change.</p>
-      <div class="price">$79</div>
-      <a href="https://linkos.bio/sanalearningglobal" target="_blank">
-        View Program
-      </a>
+    <p class="intro">
+        SANA Learning offers structured programs designed to turn
+        reflection into practical personal development.
+        Learn at your own pace and choose the path that fits
+        your current stage.
+    </p>
+
+
+    <div class="programs">
+
+        <div class="card">
+            <h3>FOUNDATION</h3>
+
+            <p>
+                Build the foundations for responsibility,
+                awareness and meaningful change.
+            </p>
+
+            <div class="price">$79</div>
+
+            <a class="button"
+               href="https://my.coursebox.ai/courses/01a0cf4c-6c16-7fcf-a48a-b961a62af8d2/about"
+               target="_blank">
+                Explore Foundation
+            </a>
+        </div>
+
+
+        <div class="card">
+            <h3>REFINEMENT</h3>
+
+            <p>
+                Develop greater discipline, clarity and
+                practical tools for continued personal growth.
+            </p>
+
+            <div class="price">$160</div>
+
+            <a class="button"
+               href="https://my.coursebox.ai/courses/01a0d313-8629-76e3-9c8b-7a0878f97dbf/about"
+               target="_blank">
+                Explore Refinement
+            </a>
+        </div>
+
+
+        <div class="card">
+            <h3>BUILDING</h3>
+
+            <p>
+                Turn knowledge into action and build
+                sustainable habits, skills and direction.
+            </p>
+
+            <div class="price">$199</div>
+
+            <a class="button"
+               href="https://my.coursebox.ai/courses/01a0d348-6807-7822-889a-6c331042f8b4/about"
+               target="_blank">
+                Explore Building
+            </a>
+        </div>
+
+
+        <div class="card complete">
+
+            <span class="badge">COMPLETE JOURNEY</span>
+
+            <h3>COMPLETE PROGRAM</h3>
+
+            <p>
+                Follow the complete SANA Learning journey
+                through all stages in one structured program.
+            </p>
+
+            <div class="price">Full Program</div>
+
+            <a class="button"
+               href="https://my.coursebox.ai/courses/01a0cdae-8902-7f41-a488-683ee2006ee8/about"
+               target="_blank">
+                Explore Complete Program
+            </a>
+
+        </div>
+
     </div>
 
-    <div class="card">
-      <h3>REFINEMENT</h3>
-      <p>Go deeper into vulnerability, courage, forgiveness, boundaries and inner development.</p>
-      <div class="price">$160</div>
-      <a href="https://linkos.bio/sanalearningglobal" target="_blank">
-        View Program
-      </a>
-    </div>
-
-    <div class="card">
-      <h3>BUILDING</h3>
-      <p>Move from personal development toward values, contribution, perseverance and meaningful action.</p>
-      <div class="price">$199</div>
-      <a href="https://linkos.bio/sanalearningglobal" target="_blank">
-        View Program
-      </a>
-    </div>
-
-    <div class="card complete">
-      <h3>COMPLETE PROGRAM</h3>
-      <p>Follow the complete SANA Learning journey through all three stages in one structured program.</p>
-      <div class="price">Full Program</div>
-      <a href="https://linkos.bio/sanalearningglobal" target="_blank">
-        Explore Complete Program
-      </a>
-    </div>
-
-  </div>
 </section>
 
-<section class="philosophy">
-  <h2>Learning With Purpose</h2>
-  <p>
-    SANA Learning is built around a simple principle: knowledge becomes
-    valuable when it changes the way we understand, decide and act.
-    Our programs combine structured learning with reflection and practical application.
-  </p>
+
+<section class="about">
+
+    <h2>What is SANA Learning?</h2>
+
+    <p>
+        SANA Learning is a practical education platform focused on
+        personal development, responsibility, reflection and useful
+        skills. Our goal is not simply to provide information, but to
+        help learners turn knowledge into meaningful action.
+    </p>
+
 </section>
 
-<section>
-  <h2>Start Your Journey</h2>
-  <p class="intro">
-    Explore the available SANA Learning programs and choose the path
-    that best matches where you are today.
-  </p>
-
-  <div style="text-align:center;">
-    <a class="hero-button"
-       style="background:#0d5c45;color:white;"
-       href="https://linkos.bio/sanalearningglobal"
-       target="_blank">
-       View Programs
-    </a>
-  </div>
-</section>
 
 <footer>
-  <strong>SANA Learning</strong><br>
-  Belgrade, Serbia<br><br>
 
-  <a href="mailto:sana.learning.global@gmail.com">
-    sana.learning.global@gmail.com
-  </a>
+    <p><strong>SANA Learning</strong></p>
 
-  <br><br>
-  © 2026 SANA Learning
+    <p>Learn. Grow. Build.</p>
+
+    <p>© 2026 SANA Learning</p>
+
 </footer>
 
 </body>

@@ -1,432 +1,1234 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="google-site-verification" content="qsSlHd2_O8_CR6WvcaH0A9WVYOO_JKh-8jodhuzFoCE" />
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
-  <title>SANA Learning | Learn. Grow. Build.</title>
+  <!-- GOOGLE SEARCH CONSOLE -->
+  <meta name="google-site-verification"
+        content="qsSlHd2_O8_CR6WvcaH0A9WVYOO_JKh-8jodhuzFoCE">
+
+  <!-- SEO -->
+  <title>SANA Learning & Publishing | Writing, Courses & Publishing Services</title>
 
   <meta name="description"
-        content="SANA Learning offers structured learning programs for personal development, practical skills and meaningful growth.">
+        content="SANA Learning & Publishing provides practical online courses, CV and LinkedIn writing, business and professional writing, speech writing, and book and eBook publishing support in English and Serbian.">
+
+  <meta name="robots"
+        content="index, follow">
 
   <style>
+
+    /* =========================================================
+       SANA DESIGN SYSTEM
+       ========================================================= */
+
+    :root {
+      --green: #0d6c4f;
+      --green-dark: #084c39;
+      --green-light: #e7f2ed;
+
+      --navy: #10283b;
+      --navy-dark: #091b29;
+
+      --gold: #c9a95e;
+      --gold-light: #eadbb6;
+
+      --cream: #f8f6f0;
+      --white: #ffffff;
+
+      --text: #17251f;
+      --muted: #66736d;
+
+      --shadow: 0 12px 35px rgba(0,0,0,0.08);
+    }
+
+
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
 
+
     html {
       scroll-behavior: smooth;
     }
 
+
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background: #f7f8f6;
-      color: #17251f;
-      line-height: 1.6;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.65;
     }
 
-    header {
-      background: #0d6c4f;
-      color: white;
-      text-align: center;
-      padding: 75px 20px;
+
+    /* =========================================================
+       NAVIGATION
+       ========================================================= */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+
+      background: rgba(255,255,255,0.96);
+      border-bottom: 1px solid #e8e8e8;
+
+      padding: 15px 22px;
     }
 
-    header h1 {
-      font-size: 46px;
-      margin-bottom: 12px;
-    }
 
-    header p {
-      font-size: 21px;
-      max-width: 760px;
-      margin: 0 auto;
-    }
-
-    .hero-button,
-    .button {
-      display: inline-block;
-      background: #0d6c4f;
-      color: white;
-      text-decoration: none;
-      border-radius: 9px;
-      font-weight: bold;
-      transition: 0.2s;
-    }
-
-    .hero-button {
-      margin-top: 30px;
-      padding: 15px 30px;
-      background: white;
-      color: #0d6c4f;
-      font-size: 18px;
-    }
-
-    .button {
-      padding: 15px 24px;
-      font-size: 18px;
-      width: 100%;
-      text-align: center;
-      margin-top: 20px;
-    }
-
-    .hero-button:hover,
-    .button:hover {
-      opacity: 0.88;
-    }
-
-    section {
-      max-width: 1100px;
+    .nav-inner {
+      max-width: 1150px;
       margin: auto;
-      padding: 65px 20px;
-    }
 
-    h2 {
-      text-align: center;
-      font-size: 34px;
-      margin-bottom: 15px;
-    }
-
-    .intro {
-      max-width: 800px;
-      margin: 0 auto 45px;
-      text-align: center;
-      font-size: 19px;
-      color: #5d6963;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       gap: 25px;
     }
 
+
+    .brand {
+      text-decoration: none;
+      color: var(--green);
+      font-weight: 800;
+      font-size: 24px;
+      letter-spacing: 2px;
+    }
+
+
+    .brand span {
+      display: block;
+      color: var(--navy);
+      font-size: 10px;
+      letter-spacing: 2px;
+      font-weight: 700;
+    }
+
+
+    .nav-links {
+      display: flex;
+      gap: 23px;
+      align-items: center;
+    }
+
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--navy);
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+
+    .nav-links a:hover {
+      color: var(--green);
+    }
+
+
+    /* =========================================================
+       HERO
+       ========================================================= */
+
+    header {
+      background:
+        linear-gradient(
+          135deg,
+          var(--green-dark),
+          var(--green),
+          var(--navy)
+        );
+
+      color: white;
+
+      padding: 105px 20px 110px;
+
+      text-align: center;
+    }
+
+
+    .hero-label {
+      color: var(--gold-light);
+      font-size: 14px;
+      font-weight: bold;
+      letter-spacing: 4px;
+      margin-bottom: 20px;
+    }
+
+
+    header h1 {
+      font-size: 60px;
+      line-height: 1.05;
+      margin-bottom: 20px;
+      letter-spacing: -1px;
+    }
+
+
+    header h1 span {
+      color: var(--gold-light);
+    }
+
+
+    header p {
+      max-width: 780px;
+      margin: auto;
+      font-size: 20px;
+      opacity: 0.94;
+    }
+
+
+    .hero-actions {
+      margin-top: 35px;
+
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+
+    .hero-button {
+      display: inline-block;
+
+      padding: 15px 28px;
+
+      border-radius: 8px;
+
+      text-decoration: none;
+      font-weight: bold;
+
+      background: white;
+      color: var(--green);
+    }
+
+
+    .hero-button.secondary {
+      background: transparent;
+      color: white;
+      border: 2px solid rgba(255,255,255,0.8);
+    }
+
+
+    /* =========================================================
+       GENERAL SECTIONS
+       ========================================================= */
+
+    section {
+      padding: 80px 20px;
+    }
+
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+
+    .section-number {
+      text-align: center;
+
+      color: var(--gold);
+      font-weight: bold;
+
+      letter-spacing: 3px;
+      font-size: 13px;
+
+      margin-bottom: 8px;
+    }
+
+
+    h2 {
+      text-align: center;
+      color: var(--navy);
+
+      font-size: 38px;
+
+      margin-bottom: 15px;
+    }
+
+
+    .section-intro {
+      max-width: 780px;
+
+      margin: 0 auto 45px;
+
+      text-align: center;
+
+      font-size: 18px;
+
+      color: var(--muted);
+    }
+
+
+    /* =========================================================
+       THREE PATHS
+       ========================================================= */
+
+    .paths {
+      margin-top: -45px;
+      position: relative;
+      z-index: 10;
+    }
+
+
+    .path-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+
+    .path {
+      background: white;
+
+      padding: 38px 30px;
+
+      border-radius: 18px;
+
+      box-shadow: var(--shadow);
+
+      text-align: center;
+    }
+
+
+    .path-number {
+      color: var(--gold);
+
+      font-size: 13px;
+      letter-spacing: 3px;
+
+      font-weight: bold;
+    }
+
+
+    .path h3 {
+      color: var(--green);
+
+      font-size: 27px;
+
+      margin: 10px 0 13px;
+    }
+
+
+    .path p {
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+
+    /* =========================================================
+       CARDS
+       ========================================================= */
+
+    .cards {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 23px;
+    }
+
+
     .card {
       background: white;
-      padding: 38px;
-      border-radius: 22px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.07);
+
+      padding: 32px;
+
+      border-radius: 18px;
+
+      box-shadow: var(--shadow);
+
       display: flex;
       flex-direction: column;
     }
 
+
     .card h3 {
-      color: #0d6c4f;
-      font-size: 27px;
-      margin-bottom: 18px;
+      color: var(--green);
+
+      font-size: 24px;
+
+      margin-bottom: 13px;
     }
 
+
     .card p {
-      font-size: 18px;
+      color: var(--muted);
+
       flex-grow: 1;
     }
 
+
     .price {
-      font-size: 32px;
+      font-size: 30px;
+
       font-weight: bold;
-      margin-top: 25px;
+
+      color: var(--navy);
+
+      margin-top: 22px;
     }
+
+
+    .small-note {
+      font-size: 13px;
+
+      color: var(--muted);
+
+      margin-top: 5px;
+    }
+
+
+    .button {
+      display: inline-block;
+
+      width: 100%;
+
+      text-align: center;
+
+      margin-top: 20px;
+
+      padding: 14px 20px;
+
+      border-radius: 8px;
+
+      background: var(--green);
+
+      color: white;
+
+      text-decoration: none;
+
+      font-weight: bold;
+    }
+
+
+    .button:hover {
+      opacity: 0.88;
+    }
+
+
+    /* =========================================================
+       COMPLETE PROGRAM
+       ========================================================= */
 
     .complete {
-      grid-column: 1 / -1;
-      border: 3px solid #0d6c4f;
-    }
+      margin-top: 25px;
 
-    .complete .badge {
-      display: inline-block;
-      width: fit-content;
-      background: #e4f2ec;
-      color: #0d6c4f;
-      padding: 7px 12px;
+      background:
+        linear-gradient(
+          135deg,
+          var(--green-dark),
+          var(--green)
+        );
+
+      color: white;
+
+      padding: 42px;
+
       border-radius: 20px;
-      font-size: 13px;
-      font-weight: bold;
-      margin-bottom: 18px;
     }
 
-    .saving {
-      margin-top: 8px;
-      color: #0d6c4f;
-      font-weight: bold;
+
+    .complete h3 {
+      font-size: 29px;
+
+      margin-bottom: 12px;
     }
 
-    .about {
-      max-width: 850px;
-      text-align: center;
+
+    .complete p {
+      max-width: 750px;
+
+      opacity: 0.92;
     }
 
-    .about p {
-      font-size: 19px;
-      color: #53615a;
+
+    .complete .price {
+      color: white;
     }
 
-    .journey {
-      text-align: center;
+
+    .complete .button {
       background: white;
-      max-width: none;
+      color: var(--green);
+
+      max-width: 320px;
     }
 
-    .journey-inner {
+
+    .badge {
+      display: inline-block;
+
+      background: var(--gold-light);
+      color: var(--navy);
+
+      padding: 6px 12px;
+
+      border-radius: 30px;
+
+      font-size: 12px;
+
+      font-weight: bold;
+
+      margin-bottom: 15px;
+    }
+
+
+    /* =========================================================
+       WRITING SECTION
+       ========================================================= */
+
+    .writing {
+      background: white;
+    }
+
+
+    .writing .card h3 {
+      color: var(--navy);
+    }
+
+
+    /* =========================================================
+       DIASPORA
+       ========================================================= */
+
+    .diaspora {
+      margin-top: 40px;
+
+      background: var(--navy);
+
+      color: white;
+
+      border-radius: 20px;
+
+      padding: 45px;
+    }
+
+
+    .diaspora h3 {
+      color: var(--gold-light);
+
+      font-size: 27px;
+
+      margin-bottom: 12px;
+    }
+
+
+    .diaspora p {
       max-width: 800px;
+      opacity: 0.92;
+    }
+
+
+    /* =========================================================
+       PUBLISHING
+       ========================================================= */
+
+    .publishing {
+      background: var(--cream);
+    }
+
+
+    /* =========================================================
+       FREE RESOURCES
+       ========================================================= */
+
+    .free {
+      background: var(--green-light);
+
+      text-align: center;
+    }
+
+
+    .free-inner {
+      max-width: 760px;
+
       margin: auto;
     }
 
-    .journey p {
-      font-size: 19px;
-      color: #5d6963;
-      margin-bottom: 25px;
+
+    .coming {
+      display: inline-block;
+
+      margin-top: 22px;
+
+      padding: 12px 20px;
+
+      background: white;
+
+      color: var(--green);
+
+      border-radius: 30px;
+
+      font-weight: bold;
     }
+
+
+    /* =========================================================
+       ABOUT
+       ========================================================= */
+
+    .about {
+      background: white;
+    }
+
+
+    .about-inner {
+      max-width: 820px;
+
+      margin: auto;
+
+      text-align: center;
+    }
+
+
+    .about-inner p {
+      color: var(--muted);
+
+      font-size: 18px;
+
+      margin-top: 15px;
+    }
+
+
+    .worldwide {
+      margin-top: 25px;
+
+      color: var(--green);
+
+      font-size: 20px;
+
+      font-weight: bold;
+    }
+
+
+    /* =========================================================
+       CONTACT
+       ========================================================= */
+
+    .contact {
+      background: var(--navy);
+
+      color: white;
+
+      text-align: center;
+    }
+
+
+    .contact h2 {
+      color: white;
+    }
+
+
+    .contact p {
+      max-width: 700px;
+
+      margin: auto;
+
+      opacity: 0.9;
+
+      font-size: 18px;
+    }
+
+
+    .contact .button {
+      width: auto;
+
+      background: var(--gold-light);
+
+      color: var(--navy);
+
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+
+    /* =========================================================
+       FOOTER
+       ========================================================= */
 
     footer {
-      background: #12251e;
+      background: var(--navy-dark);
+
       color: white;
+
       text-align: center;
-      padding: 50px 20px;
+
+      padding: 45px 20px;
     }
+
 
     footer p {
-      margin: 8px 0;
-      font-size: 17px;
+      margin: 6px 0;
+      opacity: 0.9;
     }
+
 
     footer a {
-      color: white;
+      color: var(--gold-light);
     }
 
+
+    /* =========================================================
+       MOBILE
+       ========================================================= */
+
     @media (max-width: 850px) {
+
+      .nav-links {
+        display: none;
+      }
+
+
+      header {
+        padding: 80px 20px 90px;
+      }
+
+
+      header h1 {
+        font-size: 45px;
+      }
+
+
+      .path-grid,
       .cards {
         grid-template-columns: 1fr;
       }
 
-      .complete {
-        grid-column: auto;
+
+      .paths {
+        margin-top: -30px;
       }
 
-      header h1 {
-        font-size: 38px;
-      }
-    }
-
-    @media (max-width: 520px) {
-      header {
-        padding: 60px 20px;
-      }
-
-      header h1 {
-        font-size: 36px;
-      }
-
-      header p {
-        font-size: 19px;
-      }
 
       section {
-        padding: 50px 18px;
+        padding: 65px 18px;
       }
+
+
+      .diaspora {
+        padding: 32px 25px;
+      }
+
+    }
+
+
+    @media (max-width: 520px) {
+
+      header h1 {
+        font-size: 39px;
+      }
+
+
+      header p {
+        font-size: 18px;
+      }
+
 
       h2 {
         font-size: 31px;
       }
 
+
       .card {
-        padding: 30px 25px;
+        padding: 28px 24px;
       }
 
-      .card h3 {
-        font-size: 25px;
+
+      .complete {
+        padding: 32px 25px;
       }
 
-      .price {
-        font-size: 30px;
-      }
     }
+
   </style>
+
 </head>
+
 
 <body>
 
-<header>
-  <h1>SANA Learning</h1>
+
+<!-- =========================================================
+     NAVIGATION
+     ========================================================= -->
+
+<nav>
+
+  <div class="nav-inner">
+
+    <a class="brand"
+       href="#top">
+
+      SANA
+
+      <span>
+        LEARNING &amp; PUBLISHING
+      </span>
+
+    </a>
+
+
+    <div class="nav-links">
+
+      <a href="#learn">Learn</a>
+
+      <a href="#write">Write</a>
+
+      <a href="#publish">Publish</a>
+
+      <a href="#free">Free Resources</a>
+
+      <a href="#about">About</a>
+
+      <a href="#contact">Contact</a>
+
+    </div>
+
+  </div>
+
+</nav>
+
+
+
+<!-- =========================================================
+     HERO
+     ========================================================= -->
+
+<header id="top">
+
+  <div class="hero-label">
+    SANA · LEARNING &amp; PUBLISHING
+  </div>
+
+
+  <h1>
+    Learn. Write.<br>
+    <span>Publish. Build.</span>
+  </h1>
+
 
   <p>
-    Structured learning for reflection, responsibility
-    and meaningful personal growth.
+    Practical learning, professional writing and independent
+    publishing support — built in Europe and available worldwide.
   </p>
 
-  <a class="hero-button"
-     href="#programs">
-    Explore SANA
-  </a>
+
+  <div class="hero-actions">
+
+    <a class="hero-button"
+       href="#learn">
+      Explore Learning
+    </a>
+
+
+    <a class="hero-button secondary"
+       href="#write">
+      Writing &amp; Publishing
+    </a>
+
+  </div>
+
 </header>
 
 
-<section id="programs">
 
-  <h2>Choose Your Path</h2>
+<!-- =========================================================
+     THREE PATHS
+     ========================================================= -->
 
-  <p class="intro">
-    SANA Learning offers structured programs designed to turn
-    reflection into practical personal development.
-    Learn at your own pace and choose the path that fits
-    your current stage.
-  </p>
+<section class="paths">
+
+  <div class="container">
+
+    <div class="path-grid">
 
 
-  <div class="cards">
+      <div class="path">
 
-    <!-- FOUNDATION -->
+        <div class="path-number">
+          01
+        </div>
 
-    <div class="card">
-      <h3>FOUNDATION</h3>
+        <h3>LEARN</h3>
 
-      <p>
-        Build the foundation for meaningful personal development
-        through self-awareness, responsibility and practical action.
-      </p>
+        <p>
+          Structured online learning designed to turn
+          reflection and knowledge into practical action.
+        </p>
 
-      <div class="price">$79</div>
+      </div>
 
-      <a class="button"
-         href="https://my.coursebox.ai/courses/01a0cf4c-6c16-7fcf-a48a-b961a62af8d2/about"
-         target="_blank"
-         rel="noopener noreferrer">
-        View Foundation
-      </a>
+
+      <div class="path">
+
+        <div class="path-number">
+          02
+        </div>
+
+        <h3>WRITE</h3>
+
+        <p>
+          Professional CV, LinkedIn, business and speech
+          writing for an international audience.
+        </p>
+
+      </div>
+
+
+      <div class="path">
+
+        <div class="path-number">
+          03
+        </div>
+
+        <h3>PUBLISH</h3>
+
+        <p>
+          Practical support for independent authors
+          navigating the path from manuscript to marketplace.
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     LEARN
+     ========================================================= -->
+
+<section id="learn">
+
+  <div class="container">
+
+    <div class="section-number">
+      01 · LEARN
     </div>
 
 
-    <!-- REFINEMENT -->
+    <h2>SANA Learning</h2>
 
-    <div class="card">
-      <h3>REFINEMENT</h3>
 
-      <p>
-        Deepen your awareness and develop more conscious responses
-        to life, relationships and difficult experiences.
-      </p>
+    <p class="section-intro">
+      Structured programs for reflection, responsibility,
+      practical personal development and meaningful growth.
+      Learn at your own pace from anywhere.
+    </p>
 
-      <div class="price">$160</div>
 
-      <a class="button"
-         href="https://my.coursebox.ai/courses/01a0d313-8629-76e3-9c8b-7a0878f97dbf/about"
-         target="_blank"
-         rel="noopener noreferrer">
-        View Refinement
-      </a>
+    <div class="cards">
+
+
+      <!-- FOUNDATION -->
+
+      <div class="card">
+
+        <h3>Foundation</h3>
+
+        <p>
+          Build the foundation for meaningful personal
+          development through self-awareness,
+          responsibility and practical action.
+        </p>
+
+        <div class="price">
+          $79
+        </div>
+
+        <a class="button"
+           href="https://my.coursebox.ai/courses/01a0cf4c-6c16-7fcf-a48a-b961a62af8d2/about"
+           target="_blank"
+           rel="noopener noreferrer">
+
+          View Foundation
+
+        </a>
+
+      </div>
+
+
+
+      <!-- REFINEMENT -->
+
+      <div class="card">
+
+        <h3>Refinement</h3>
+
+        <p>
+          Deepen awareness and develop more conscious
+          responses to life, relationships and
+          difficult experiences.
+        </p>
+
+        <div class="price">
+          $160
+        </div>
+
+        <a class="button"
+           href="https://my.coursebox.ai/courses/01a0d313-8629-76e3-9c8b-7a0878f97dbf/about"
+           target="_blank"
+           rel="noopener noreferrer">
+
+          View Refinement
+
+        </a>
+
+      </div>
+
+
+
+      <!-- BUILDING -->
+
+      <div class="card">
+
+        <h3>Building</h3>
+
+        <p>
+          Turn personal development into conscious
+          action through responsibility, values,
+          meaning and contribution.
+        </p>
+
+        <div class="price">
+          $199
+        </div>
+
+        <a class="button"
+           href="https://my.coursebox.ai/courses/01a0d348-6807-7822-889a-6c331042f8b4/about"
+           target="_blank"
+           rel="noopener noreferrer">
+
+          View Building
+
+        </a>
+
+      </div>
+
     </div>
 
-
-    <!-- BUILDING -->
-
-    <div class="card">
-      <h3>BUILDING</h3>
-
-      <p>
-        Turn personal development into conscious action through
-        responsibility, values, meaning and contribution.
-      </p>
-
-      <div class="price">$199</div>
-
-      <a class="button"
-         href="https://my.coursebox.ai/courses/01a0d348-6807-7822-889a-6c331042f8b4/about"
-         target="_blank"
-         rel="noopener noreferrer">
-        View Building
-      </a>
-    </div>
 
 
     <!-- COMPLETE PROGRAM -->
 
-    <div class="card complete">
+    <div class="complete">
 
-      <span class="badge">BEST VALUE · 33 LESSONS · 3 STAGES</span>
+      <span class="badge">
+        BEST VALUE · 33 LESSONS · 3 STAGES
+      </span>
 
-      <h3>COMPLETE PROGRAM</h3>
+      <h3>
+        Complete SANA Program
+      </h3>
 
       <p>
-        Follow the complete SANA Learning journey through all three
-        stages in one connected personal development system.
+        Follow the complete SANA Learning journey through
+        all three stages in one connected personal
+        development system.
       </p>
 
-      <div class="price">$299</div>
-
-      <div class="saving">
-        Save $139 compared with purchasing all three stages separately.
+      <div class="price">
+        $299
       </div>
+
+      <p>
+        Save $139 compared with purchasing all three
+        stages separately.
+      </p>
 
       <a class="button"
          href="https://my.coursebox.ai/courses/01a0cdae-8902-7f41-a488-683ee2006ee8/about"
          target="_blank"
          rel="noopener noreferrer">
+
         Explore Complete Program
+
       </a>
+
     </div>
 
   </div>
-</section>
-
-
-<section class="about">
-
-  <h2>What is SANA Learning?</h2>
-
-  <p>
-    SANA Learning is built around a simple principle:
-    knowledge becomes valuable when it changes the way we understand,
-    decide and act. Our programs combine structured learning with
-    reflection and practical application.
-  </p>
 
 </section>
 
 
-<section class="journey">
 
-  <div class="journey-inner">
+<!-- =========================================================
+     WRITE
+     ========================================================= -->
 
-    <h2>Start Your Journey</h2>
+<section id="write"
+         class="writing">
 
-    <p>
-      Explore the complete SANA Learning platform, programs
-      and available resources.
+  <div class="container">
+
+    <div class="section-number">
+      02 · WRITE
+    </div>
+
+
+    <h2>Professional Writing</h2>
+
+
+    <p class="section-intro">
+      Clear, individual writing support for professionals,
+      entrepreneurs and people building their next opportunity.
+      Services are available in English and Serbian.
     </p>
 
-    <a class="button"
-       style="width:auto; padding-left:35px; padding-right:35px;"
-       href="https://linkos.bio/sanalearningglobal"
-       target="_blank"
-       rel="noopener noreferrer">
-      Explore SANA Learning
-    </a>
 
-  </div>
-
-</section>
+    <div class="cards">
 
 
-<footer>
+      <div class="card">
 
-  <p><strong>SANA Learning</strong></p>
+        <h3>Professional CV / Resume</h3>
 
-  <p>Learn. Grow. Build.</p>
+        <p>
+          Professionally structured career presentation
+          designed for clarity, credibility and
+          international use.
+        </p>
 
-  <p>Belgrade, Serbia</p>
+        <div class="price">
+          $59
+        </div>
 
-  <p>
-    <a href="mailto:sana.learning.global@gmail.com">
-      sana.learning.global@gmail.com
-    </a>
-  </p>
+        <a class="button"
+           href="mailto:sana.learning.global@gmail.com?subject=Professional%20CV%20Request">
 
-  <p>© 2026 SANA Learning</p>
+          Request Service
 
-</footer>
+        </a>
 
-</body>
-</html>
+      </div>
+
+
+
+      <div class="card">
+
+        <h3>CV + LinkedIn</h3>
+
+        <p>
+          Professional CV or resume combined with a
+          structured LinkedIn profile for a consistent
+          professional presence.
+        </p>
+
+        <div class="price">
+          $105
+        </div>
+
+        <a class="button"
+           href="mailto:sana.learning.global@gmail.com?subject=CV%20and%20LinkedIn%20Request">
+
+          Request Service
+
+        </a>
+
+      </div>
+
+
+
+      <div class="card">
+
+        <h3>Executive Career Package</h3>
+
+        <p>
+          CV or resume, LinkedIn profile and cover letter
+          prepared as one coordinated professional package.
+        </p>
+
+        <div class="price">
+          $159
+        </div>
+
+        <a class="button"
+           href="mailto:sana.learning.global@gmail.com?subject=Executive%20Career%20Package">
+
+          Request Service
+
+        </a>
+
+      </div>
+
+
+
+      <div class="card">
+
+        <h3>Business Writing</h3>
+
+        <p>
+          Professional biographies, business content,
+          presentations and selected commercial
+          writing projects.
+        </p>
+
+        <div class="price">
+          From $59
+        </div>
+
+        <a class="button"
+           href="mailto:sana.learning.global@gmail.com?subject=Business%20Writing%20Request">
+
+          Request Service
+
+        </a>
+
+      </div>
+
+
+
+      <div class="card">
+
+        <h3>Speech Writing</h3>
+
+        <p>
+          Individual speeches and addresses shaped around
+          your audience, occasion, message and personal voice.
+        </p>
+
+        <div class="price">
+          From $79
+        </div>
+
+        <a class="button"
+           href="mailto:sana.learning.global@gmail.com?subject=Speech%20Writing%20Request">
+
+          Request Service
+
+        </a>
+
+      </div>
+
+
+
+      <div class="card">
+
+        <h3>Custom Writing Project</h3>
+
+        <p>
+          Have a writing project that does not fit a
+          standard package? Tell us what you need and
+          receive an individual proposal.
+        </p>
+
+        <div class="price">
+          Custom
+        </div>
+
+        <a class="button"
+           href="mailto:sana.le

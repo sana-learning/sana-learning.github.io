@@ -1,1234 +1,1302 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="google-site-verification"
+      content="qsSlHd2_O8_CR6WvcaH0A9WVYOO_JKh-8jodhuzFoCE">
+
+<title>SANA Learning & Publishing | Writing, Courses & Publishing Services</title>
+
+<meta name="description"
+      content="SANA Learning & Publishing provides practical online courses, CV and LinkedIn writing, business and professional writing, speech writing, and book and eBook publishing support in English and Serbian.">
+
+<meta name="robots" content="index, follow">
+
+<style>
+
+/* ==========================================================
+   SANA V3.2 — MASTER VISUAL SYSTEM
+   ========================================================== */
+
+:root{
+  --forest:#075842;
+  --green:#087558;
+  --green2:#0b8967;
+  --sage:#eaf3ee;
+
+  --navy:#102b3d;
+  --navy2:#173b51;
+  --navyDark:#071a27;
+
+  --gold:#c7a45a;
+  --gold2:#e2c98e;
+  --goldSoft:#f1e5c6;
+
+  --cream:#f7f5ef;
+  --paper:#fffefa;
+  --white:#ffffff;
+
+  --text:#172a34;
+  --muted:#687770;
+
+  --border:rgba(16,43,61,.11);
+  --shadow:0 14px 38px rgba(7,26,39,.08);
+  --shadowStrong:0 20px 55px rgba(7,26,39,.14);
+
+  --radius:18px;
+  --max:1120px;
+  --navHeight:82px;
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:var(--cream);
+  color:var(--text);
+  line-height:1.65;
+}
+
+a{
+  -webkit-tap-highlight-color:transparent;
+}
+
+section{
+  scroll-margin-top:100px;
+}
+
+.container{
+  width:min(var(--max),calc(100% - 40px));
+  margin:auto;
+}
+
+/* ==========================================================
+   NAVIGATION
+   ========================================================== */
+
+.site-nav{
+  position:sticky;
+  top:0;
+  z-index:9999;
+
+  background:rgba(255,255,255,.97);
+  border-bottom:1px solid rgba(16,43,61,.09);
+  backdrop-filter:blur(10px);
+}
+
+.nav-inner{
+  min-height:var(--navHeight);
+  max-width:1180px;
+  margin:auto;
+  padding:10px 24px;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:30px;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:13px;
+
+  text-decoration:none;
+}
+
+.brand-mark{
+  width:46px;
+  height:46px;
+  border-radius:50%;
+
+  display:grid;
+  place-items:center;
 
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+  background:
+    linear-gradient(145deg,var(--green),var(--forest));
+
+  border:2px solid var(--gold);
+  box-shadow:0 6px 16px rgba(7,88,66,.16);
+
+  color:var(--goldSoft);
+  font-family:Georgia,serif;
+  font-size:25px;
+  font-weight:bold;
+}
+
+.brand-copy strong{
+  display:block;
 
-  <!-- GOOGLE SEARCH CONSOLE -->
-  <meta name="google-site-verification"
-        content="qsSlHd2_O8_CR6WvcaH0A9WVYOO_JKh-8jodhuzFoCE">
+  color:var(--green);
+  font-family:Georgia,serif;
+  font-size:24px;
+  letter-spacing:3px;
+  line-height:1;
+}
+
+.brand-copy small{
+  display:block;
+
+  margin-top:7px;
+
+  color:var(--navy);
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:2.4px;
+}
+
+.desktop-nav{
+  display:flex;
+  align-items:center;
+  gap:27px;
+}
+
+.desktop-nav a{
+  display:inline-block;
+  padding:12px 2px;
+
+  color:var(--navy);
+  text-decoration:none;
+
+  font-size:14px;
+  font-weight:700;
+
+  cursor:pointer;
+  touch-action:manipulation;
+}
+
+.desktop-nav a:hover,
+.desktop-nav a:focus{
+  color:var(--green);
+}
+
+.desktop-nav .contact-link{
+  color:var(--green);
+}
+
+.menu-button{
+  display:none;
+
+  width:46px;
+  height:46px;
+
+  border:0;
+  background:transparent;
+
+  color:var(--navy);
+  font-size:29px;
+
+  cursor:pointer;
+}
+
+.mobile-nav{
+  display:none;
+  background:white;
+  padding:5px 20px 18px;
+  border-top:1px solid #eee;
+}
+
+.mobile-nav.open{
+  display:block;
+}
 
-  <!-- SEO -->
-  <title>SANA Learning & Publishing | Writing, Courses & Publishing Services</title>
+.mobile-nav a{
+  display:block;
+  padding:14px 8px;
 
-  <meta name="description"
-        content="SANA Learning & Publishing provides practical online courses, CV and LinkedIn writing, business and professional writing, speech writing, and book and eBook publishing support in English and Serbian.">
+  color:var(--navy);
+  text-decoration:none;
+  font-weight:700;
 
-  <meta name="robots"
-        content="index, follow">
+  border-bottom:1px solid #eee;
+}
 
-  <style>
+.mobile-nav a:last-child{
+  border-bottom:0;
+  color:var(--green);
+}
+
+/* ==========================================================
+   HERO — SANA MASTER BRAND
+   ========================================================== */
+
+.hero{
+  position:relative;
+  overflow:hidden;
+
+  min-height:600px;
+
+  display:flex;
+  align-items:center;
+
+  background:
+    radial-gradient(circle at 82% 20%,
+      rgba(226,201,142,.14),
+      transparent 28%),
+    radial-gradient(circle at 10% 80%,
+      rgba(255,255,255,.08),
+      transparent 27%),
+    linear-gradient(
+      125deg,
+      #064d3a 0%,
+      #087558 48%,
+      #102b3d 100%
+    );
+
+  color:white;
+}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  width:430px;
+  height:430px;
+
+  right:-120px;
+  top:-150px;
+
+  border:1px solid rgba(226,201,142,.23);
+  border-radius:50%;
+}
 
-    /* =========================================================
-       SANA DESIGN SYSTEM
-       ========================================================= */
+.hero::after{
+  content:"";
+  position:absolute;
 
-    :root {
-      --green: #0d6c4f;
-      --green-dark: #084c39;
-      --green-light: #e7f2ed;
+  width:300px;
+  height:300px;
 
-      --navy: #10283b;
-      --navy-dark: #091b29;
+  right:-50px;
+  top:-85px;
+
+  border:1px solid rgba(226,201,142,.14);
+  border-radius:50%;
+}
+
+.hero-inner{
+  position:relative;
+  z-index:2;
+
+  width:min(950px,calc(100% - 40px));
+  margin:auto;
 
-      --gold: #c9a95e;
-      --gold-light: #eadbb6;
+  text-align:center;
+  padding:90px 0 120px;
+}
 
-      --cream: #f8f6f0;
-      --white: #ffffff;
+.hero-emblem{
+  width:88px;
+  height:88px;
+
+  margin:0 auto 23px;
+
+  display:grid;
+  place-items:center;
+
+  border-radius:50%;
+  border:2px solid var(--gold2);
 
-      --text: #17251f;
-      --muted: #66736d;
+  color:var(--goldSoft);
 
-      --shadow: 0 12px 35px rgba(0,0,0,0.08);
-    }
+  font-family:Georgia,serif;
+  font-size:43px;
+  font-weight:bold;
 
+  box-shadow:
+    0 0 0 7px rgba(255,255,255,.035),
+    0 14px 30px rgba(0,0,0,.12);
+}
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+.hero-label{
+  margin-bottom:20px;
 
+  color:var(--goldSoft);
+  font-size:13px;
+  font-weight:800;
+  letter-spacing:5px;
+}
 
-    html {
-      scroll-behavior: smooth;
-    }
+.hero h1{
+  max-width:850px;
+  margin:0 auto 23px;
 
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:63px;
+  line-height:1.05;
+  font-weight:500;
+}
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--cream);
-      color: var(--text);
-      line-height: 1.65;
-    }
+.hero h1 span{
+  color:var(--goldSoft);
+}
 
+.hero-text{
+  max-width:780px;
+  margin:auto;
 
-    /* =========================================================
-       NAVIGATION
-       ========================================================= */
+  color:rgba(255,255,255,.92);
+  font-size:20px;
+}
 
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+.hero-actions{
+  margin-top:36px;
 
-      background: rgba(255,255,255,0.96);
-      border-bottom: 1px solid #e8e8e8;
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  flex-wrap:wrap;
+}
 
-      padding: 15px 22px;
-    }
+.hero-button{
+  display:inline-block;
 
+  min-width:195px;
+  padding:15px 25px;
 
-    .nav-inner {
-      max-width: 1150px;
-      margin: auto;
+  border-radius:8px;
 
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 25px;
-    }
+  background:white;
+  color:var(--green);
 
+  text-decoration:none;
+  font-weight:800;
 
-    .brand {
-      text-decoration: none;
-      color: var(--green);
-      font-weight: 800;
-      font-size: 24px;
-      letter-spacing: 2px;
-    }
+  cursor:pointer;
+}
 
+.hero-button.secondary{
+  background:transparent;
+  color:white;
+  border:1px solid rgba(255,255,255,.7);
+}
 
-    .brand span {
-      display: block;
-      color: var(--navy);
-      font-size: 10px;
-      letter-spacing: 2px;
-      font-weight: 700;
-    }
+/* ==========================================================
+   MASTER PATHS
+   ========================================================== */
 
+.paths{
+  position:relative;
+  z-index:10;
 
-    .nav-links {
-      display: flex;
-      gap: 23px;
-      align-items: center;
-    }
+  margin-top:-55px;
+  padding-bottom:45px;
+}
 
+.path-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
 
-    .nav-links a {
-      text-decoration: none;
-      color: var(--navy);
-      font-size: 14px;
-      font-weight: bold;
-    }
+.path-card{
+  position:relative;
+  overflow:hidden;
 
+  display:block;
+  min-height:235px;
 
-    .nav-links a:hover {
-      color: var(--green);
-    }
+  padding:35px 30px;
 
+  background:white;
+  border:1px solid rgba(16,43,61,.07);
+  border-radius:var(--radius);
 
-    /* =========================================================
-       HERO
-       ========================================================= */
+  box-shadow:var(--shadow);
 
-    header {
-      background:
-        linear-gradient(
-          135deg,
-          var(--green-dark),
-          var(--green),
-          var(--navy)
-        );
+  text-align:center;
+  text-decoration:none;
+  color:inherit;
 
-      color: white;
+  transition:.2s ease;
 
-      padding: 105px 20px 110px;
+  cursor:pointer;
+}
 
-      text-align: center;
-    }
+.path-card:hover{
+  transform:translateY(-5px);
+  box-shadow:var(--shadowStrong);
+}
 
+.path-card::after{
+  content:"";
+  position:absolute;
 
-    .hero-label {
-      color: var(--gold-light);
-      font-size: 14px;
-      font-weight: bold;
-      letter-spacing: 4px;
-      margin-bottom: 20px;
-    }
+  height:4px;
+  left:0;
+  right:0;
+  bottom:0;
 
+  background:var(--gold);
+}
 
-    header h1 {
-      font-size: 60px;
-      line-height: 1.05;
-      margin-bottom: 20px;
-      letter-spacing: -1px;
-    }
+.path-icon{
+  width:52px;
+  height:52px;
 
+  margin:0 auto 15px;
 
-    header h1 span {
-      color: var(--gold-light);
-    }
+  display:grid;
+  place-items:center;
 
+  border-radius:50%;
 
-    header p {
-      max-width: 780px;
-      margin: auto;
-      font-size: 20px;
-      opacity: 0.94;
-    }
+  background:var(--sage);
+  color:var(--green);
 
+  font-family:Georgia,serif;
+  font-size:23px;
+  font-weight:bold;
+}
 
-    .hero-actions {
-      margin-top: 35px;
+.path-number{
+  color:var(--gold);
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:3px;
+}
 
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
+.path-card h3{
+  margin:8px 0 10px;
 
+  color:var(--green);
+  font-family:Georgia,serif;
+  font-size:27px;
+}
 
-    .hero-button {
-      display: inline-block;
+.path-card p{
+  color:var(--muted);
+}
 
-      padding: 15px 28px;
+/* ==========================================================
+   GENERAL SECTIONS
+   ========================================================== */
 
-      border-radius: 8px;
+.content-section{
+  padding:88px 0;
+}
 
-      text-decoration: none;
-      font-weight: bold;
+.white-section{
+  background:white;
+}
 
-      background: white;
-      color: var(--green);
-    }
+.section-number{
+  margin-bottom:9px;
 
+  text-align:center;
 
-    .hero-button.secondary {
-      background: transparent;
-      color: white;
-      border: 2px solid rgba(255,255,255,0.8);
-    }
+  color:var(--gold);
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:3px;
+}
 
+h2{
+  margin-bottom:15px;
 
-    /* =========================================================
-       GENERAL SECTIONS
-       ========================================================= */
+  text-align:center;
 
-    section {
-      padding: 80px 20px;
-    }
+  color:var(--navy);
 
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:41px;
+  font-weight:500;
+  line-height:1.2;
+}
 
-    .container {
-      max-width: 1100px;
-      margin: auto;
-    }
+.section-intro{
+  max-width:790px;
+  margin:0 auto 46px;
 
+  text-align:center;
 
-    .section-number {
-      text-align: center;
+  color:var(--muted);
+  font-size:18px;
+}
 
-      color: var(--gold);
-      font-weight: bold;
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:23px;
+}
 
-      letter-spacing: 3px;
-      font-size: 13px;
+.card{
+  position:relative;
 
-      margin-bottom: 8px;
-    }
+  min-height:100%;
 
+  padding:31px 28px;
 
-    h2 {
-      text-align: center;
-      color: var(--navy);
+  background:var(--paper);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
 
-      font-size: 38px;
+  box-shadow:var(--shadow);
 
-      margin-bottom: 15px;
-    }
+  display:flex;
+  flex-direction:column;
+}
 
+.card h3{
+  margin-bottom:12px;
 
-    .section-intro {
-      max-width: 780px;
+  color:var(--green);
 
-      margin: 0 auto 45px;
+  font-family:Georgia,serif;
+  font-size:24px;
+  font-weight:500;
+}
 
-      text-align: center;
+.card p{
+  color:var(--muted);
+  flex-grow:1;
+}
 
-      font-size: 18px;
+.price{
+  margin-top:22px;
 
-      color: var(--muted);
-    }
+  color:var(--navy);
+  font-size:29px;
+  font-weight:800;
+}
 
+.button{
+  display:inline-block;
+  width:100%;
 
-    /* =========================================================
-       THREE PATHS
-       ========================================================= */
+  margin-top:20px;
+  padding:14px 18px;
 
-    .paths {
-      margin-top: -45px;
-      position: relative;
-      z-index: 10;
-    }
+  border-radius:7px;
 
+  background:var(--green);
+  color:white;
 
-    .path-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-    }
+  text-align:center;
+  text-decoration:none;
+  font-weight:800;
 
+  cursor:pointer;
+}
 
-    .path {
-      background: white;
+.button:hover{
+  background:var(--forest);
+}
 
-      padding: 38px 30px;
+/* ==========================================================
+   LEARN — GREEN / GOLD IDENTITY
+   ========================================================== */
 
-      border-radius: 18px;
+#learn{
+  background:
+    linear-gradient(
+      180deg,
+      var(--cream),
+      #f1f5f1
+    );
+}
 
-      box-shadow: var(--shadow);
+#learn .section-number{
+  color:var(--green);
+}
 
-      text-align: center;
-    }
+#learn .card{
+  border-top:3px solid var(--green);
+}
 
+#learn .card::before{
+  content:"S";
+  position:absolute;
 
-    .path-number {
-      color: var(--gold);
+  right:20px;
+  top:14px;
 
-      font-size: 13px;
-      letter-spacing: 3px;
+  color:rgba(8,117,88,.055);
 
-      font-weight: bold;
-    }
+  font-family:Georgia,serif;
+  font-size:70px;
+  font-weight:bold;
+}
 
+/* ==========================================================
+   FEATURED LEARNING PACKAGE
+   ========================================================== */
 
-    .path h3 {
-      color: var(--green);
+.featured{
+  position:relative;
+  overflow:hidden;
 
-      font-size: 27px;
+  margin-top:27px;
+  padding:43px 40px;
 
-      margin: 10px 0 13px;
-    }
+  border-radius:20px;
 
+  background:
+    radial-gradient(circle at 90% 10%,
+      rgba(226,201,142,.18),
+      transparent 30%),
+    linear-gradient(
+      130deg,
+      var(--forest),
+      var(--green)
+    );
 
-    .path p {
-      color: var(--muted);
-      font-size: 16px;
-    }
+  color:white;
 
+  box-shadow:var(--shadow);
+}
 
-    /* =========================================================
-       CARDS
-       ========================================================= */
+.featured::after{
+  content:"SANA";
+  position:absolute;
 
-    .cards {
-      display: grid;
+  right:35px;
+  bottom:-22px;
 
-      grid-template-columns:
-        repeat(3, 1fr);
+  color:rgba(255,255,255,.045);
 
-      gap: 23px;
-    }
+  font-family:Georgia,serif;
+  font-size:100px;
+  font-weight:bold;
+  letter-spacing:6px;
+}
 
+.badge{
+  position:relative;
+  z-index:2;
 
-    .card {
-      background: white;
+  display:inline-block;
 
-      padding: 32px;
+  margin-bottom:16px;
+  padding:6px 12px;
 
-      border-radius: 18px;
+  border-radius:30px;
 
-      box-shadow: var(--shadow);
+  background:var(--goldSoft);
+  color:var(--navy);
 
-      display: flex;
-      flex-direction: column;
-    }
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.5px;
+}
 
+.featured h3{
+  position:relative;
+  z-index:2;
 
-    .card h3 {
-      color: var(--green);
+  margin-bottom:12px;
 
-      font-size: 24px;
+  font-family:Georgia,serif;
+  font-size:30px;
+  font-weight:500;
+}
 
-      margin-bottom: 13px;
-    }
+.featured p,
+.featured .price,
+.featured .button{
+  position:relative;
+  z-index:2;
+}
 
+.featured p{
+  max-width:760px;
+  opacity:.93;
+}
 
-    .card p {
-      color: var(--muted);
+.featured .price{
+  color:white;
+}
 
-      flex-grow: 1;
-    }
+.featured .button{
+  max-width:320px;
 
+  background:white;
+  color:var(--green);
+}
 
-    .price {
-      font-size: 30px;
+/* ==========================================================
+   WRITE — NAVY / GOLD IDENTITY
+   ========================================================== */
 
-      font-weight: bold;
+#write{
+  position:relative;
 
-      color: var(--navy);
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff,
+      #f7f8f8
+    );
+}
 
-      margin-top: 22px;
-    }
+#write .section-number{
+  color:var(--gold);
+}
 
+#write h2{
+  color:var(--navy);
+}
 
-    .small-note {
-      font-size: 13px;
+#write .card{
+  border-top:3px solid var(--navy);
+}
 
-      color: var(--muted);
+#write .card h3{
+  color:var(--navy);
+}
 
-      margin-top: 5px;
-    }
+#write .button{
+  background:var(--navy);
+}
 
+#write .button:hover{
+  background:var(--navyDark);
+}
 
-    .button {
-      display: inline-block;
+.diaspora{
+  position:relative;
+  overflow:hidden;
 
-      width: 100%;
+  margin-top:40px;
+  padding:43px 40px;
 
-      text-align: center;
+  border-radius:20px;
 
-      margin-top: 20px;
+  background:
+    radial-gradient(circle at 92% 10%,
+      rgba(226,201,142,.15),
+      transparent 32%),
+    linear-gradient(
+      130deg,
+      var(--navyDark),
+      var(--navy2)
+    );
 
-      padding: 14px 20px;
+  color:white;
+}
 
-      border-radius: 8px;
+.diaspora::after{
+  content:"Aa";
+  position:absolute;
 
-      background: var(--green);
+  right:35px;
+  bottom:-35px;
 
-      color: white;
+  color:rgba(226,201,142,.08);
 
-      text-decoration: none;
+  font-family:Georgia,serif;
+  font-size:120px;
+}
 
-      font-weight: bold;
-    }
+.diaspora h3{
+  position:relative;
+  z-index:2;
 
+  margin-bottom:12px;
 
-    .button:hover {
-      opacity: 0.88;
-    }
+  color:var(--goldSoft);
 
+  font-family:Georgia,serif;
+  font-size:28px;
+  font-weight:500;
+}
 
-    /* =========================================================
-       COMPLETE PROGRAM
-       ========================================================= */
+.diaspora p{
+  position:relative;
+  z-index:2;
 
-    .complete {
-      margin-top: 25px;
+  max-width:820px;
+  opacity:.92;
+}
 
-      background:
-        linear-gradient(
-          135deg,
-          var(--green-dark),
-          var(--green)
-        );
+/* ==========================================================
+   PUBLISH — EDITORIAL IDENTITY
+   ========================================================== */
 
-      color: white;
+#publish{
+  background:
+    linear-gradient(
+      180deg,
+      #f7f5ef,
+      #f4f1e9
+    );
+}
 
-      padding: 42px;
+#publish .card{
+  border-top:3px solid var(--gold);
+}
 
-      border-radius: 20px;
-    }
+#publish .card h3{
+  color:var(--navy);
+}
 
+#publish .button{
+  background:var(--navy);
+}
 
-    .complete h3 {
-      font-size: 29px;
+#publish .button:hover{
+  background:var(--navyDark);
+}
 
-      margin-bottom: 12px;
-    }
+#publish .featured{
+  background:
+    radial-gradient(circle at 90% 10%,
+      rgba(226,201,142,.14),
+      transparent 32%),
+    linear-gradient(
+      130deg,
+      var(--navyDark),
+      var(--navy)
+    );
+}
 
+#publish .featured .button{
+  background:var(--goldSoft);
+  color:var(--navy);
+}
 
-    .complete p {
-      max-width: 750px;
+/* ==========================================================
+   FREE RESOURCES
+   ========================================================== */
 
-      opacity: 0.92;
-    }
+.free-section{
+  background:
+    linear-gradient(
+      135deg,
+      #e7f2ed,
+      #f4f0e5
+    );
+}
 
+.free-box{
+  max-width:900px;
+  margin:auto;
+}
 
-    .complete .price {
-      color: white;
-    }
+.free-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:20px;
+}
 
+.free-card{
+  padding:32px 27px;
 
-    .complete .button {
-      background: white;
-      color: var(--green);
+  background:white;
+  border:1px solid var(--border);
+  border-radius:var(--radius);
 
-      max-width: 320px;
-    }
+  box-shadow:var(--shadow);
 
+  text-align:center;
+}
 
-    .badge {
-      display: inline-block;
+.free-symbol{
+  width:50px;
+  height:50px;
 
-      background: var(--gold-light);
-      color: var(--navy);
+  margin:0 auto 14px;
 
-      padding: 6px 12px;
+  display:grid;
+  place-items:center;
 
-      border-radius: 30px;
+  border-radius:50%;
 
-      font-size: 12px;
+  background:var(--sage);
+  color:var(--green);
 
-      font-weight: bold;
+  font-family:Georgia,serif;
+  font-size:23px;
+  font-weight:bold;
+}
 
-      margin-bottom: 15px;
-    }
+.free-card h3{
+  margin-bottom:10px;
 
+  color:var(--green);
 
-    /* =========================================================
-       WRITING SECTION
-       ========================================================= */
+  font-family:Georgia,serif;
+  font-size:23px;
+  font-weight:500;
+}
 
-    .writing {
-      background: white;
-    }
+.free-card p{
+  color:var(--muted);
+}
 
+.coming{
+  display:inline-block;
 
-    .writing .card h3 {
-      color: var(--navy);
-    }
+  margin-top:18px;
+  padding:8px 15px;
 
+  border-radius:30px;
 
-    /* =========================================================
-       DIASPORA
-       ========================================================= */
+  background:var(--cream);
+  color:var(--green);
 
-    .diaspora {
-      margin-top: 40px;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:1px;
+}
 
-      background: var(--navy);
+/* ==========================================================
+   ABOUT
+   ========================================================== */
 
-      color: white;
+.about-box{
+  max-width:850px;
+  margin:auto;
+  text-align:center;
+}
 
-      border-radius: 20px;
+.about-seal{
+  width:75px;
+  height:75px;
 
-      padding: 45px;
-    }
+  margin:0 auto 20px;
 
+  display:grid;
+  place-items:center;
 
-    .diaspora h3 {
-      color: var(--gold-light);
+  border-radius:50%;
 
-      font-size: 27px;
+  background:var(--green);
+  border:3px double var(--gold);
 
-      margin-bottom: 12px;
-    }
+  color:var(--goldSoft);
 
+  font-family:Georgia,serif;
+  font-size:32px;
+  font-weight:bold;
+}
 
-    .diaspora p {
-      max-width: 800px;
-      opacity: 0.92;
-    }
+.about-box p{
+  margin-top:15px;
 
+  color:var(--muted);
+  font-size:18px;
+}
 
-    /* =========================================================
-       PUBLISHING
-       ========================================================= */
+.worldwide{
+  margin-top:28px;
 
-    .publishing {
-      background: var(--cream);
-    }
+  color:var(--green);
+  font-family:Georgia,serif;
+  font-size:21px;
+  font-weight:bold;
+}
 
+/* ==========================================================
+   CONTACT
+   ========================================================== */
 
-    /* =========================================================
-       FREE RESOURCES
-       ========================================================= */
+.contact-section{
+  position:relative;
+  overflow:hidden;
 
-    .free {
-      background: var(--green-light);
+  background:
+    radial-gradient(circle at 15% 80%,
+      rgba(8,117,88,.25),
+      transparent 30%),
+    linear-gradient(
+      130deg,
+      var(--navyDark),
+      var(--navy)
+    );
 
-      text-align: center;
-    }
+  color:white;
+  text-align:center;
+}
 
+.contact-section h2{
+  color:white;
+}
 
-    .free-inner {
-      max-width: 760px;
+.contact-section .section-intro{
+  color:rgba(255,255,255,.84);
+}
 
-      margin: auto;
-    }
+.contact-button{
+  display:inline-block;
 
+  padding:15px 31px;
 
-    .coming {
-      display: inline-block;
+  border-radius:8px;
 
-      margin-top: 22px;
+  background:var(--goldSoft);
+  color:var(--navy);
 
-      padding: 12px 20px;
+  text-decoration:none;
+  font-weight:800;
+}
 
-      background: white;
+.contact-email{
+  margin-top:23px;
+}
 
-      color: var(--green);
+.contact-email a{
+  color:white;
+}
 
-      border-radius: 30px;
+/* ==========================================================
+   FOOTER
+   ========================================================== */
 
-      font-weight: bold;
-    }
+footer{
+  padding:45px 20px;
 
+  background:var(--navyDark);
+  color:white;
 
-    /* =========================================================
-       ABOUT
-       ========================================================= */
+  text-align:center;
 
-    .about {
-      background: white;
-    }
+  border-top:1px solid rgba(226,201,142,.2);
+}
 
+.footer-mark{
+  width:45px;
+  height:45px;
 
-    .about-inner {
-      max-width: 820px;
+  margin:0 auto 15px;
 
-      margin: auto;
+  display:grid;
+  place-items:center;
 
-      text-align: center;
-    }
+  border:1px solid var(--gold);
+  border-radius:50%;
 
+  color:var(--goldSoft);
 
-    .about-inner p {
-      color: var(--muted);
+  font-family:Georgia,serif;
+  font-size:22px;
+  font-weight:bold;
+}
 
-      font-size: 18px;
+footer p{
+  margin:5px 0;
+  opacity:.85;
+}
 
-      margin-top: 15px;
-    }
+footer strong{
+  color:var(--goldSoft);
+}
 
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
 
-    .worldwide {
-      margin-top: 25px;
+@media(max-width:850px){
 
-      color: var(--green);
+  .desktop-nav{
+    display:none;
+  }
 
-      font-size: 20px;
+  .menu-button{
+    display:block;
+  }
 
-      font-weight: bold;
-    }
+  .hero{
+    min-height:auto;
+  }
 
+  .hero-inner{
+    padding:75px 0 100px;
+  }
 
-    /* =========================================================
-       CONTACT
-       ========================================================= */
+  .hero h1{
+    font-size:48px;
+  }
 
-    .contact {
-      background: var(--navy);
+  .path-grid,
+  .cards{
+    grid-template-columns:1fr;
+  }
 
-      color: white;
+  .paths{
+    margin-top:-35px;
+  }
 
-      text-align: center;
-    }
+  .free-grid{
+    grid-template-columns:1fr;
+  }
 
+  .content-section{
+    padding:70px 0;
+  }
 
-    .contact h2 {
-      color: white;
-    }
+  .featured,
+  .diaspora{
+    padding:33px 27px;
+  }
 
+}
 
-    .contact p {
-      max-width: 700px;
+@media(max-width:520px){
 
-      margin: auto;
+  :root{
+    --navHeight:74px;
+  }
 
-      opacity: 0.9;
+  .container{
+    width:min(var(--max),calc(100% - 32px));
+  }
 
-      font-size: 18px;
-    }
+  .nav-inner{
+    padding:9px 17px;
+  }
 
+  .brand-mark{
+    width:40px;
+    height:40px;
+    font-size:21px;
+  }
 
-    .contact .button {
-      width: auto;
+  .brand-copy strong{
+    font-size:21px;
+  }
 
-      background: var(--gold-light);
+  .brand-copy small{
+    font-size:7px;
+    letter-spacing:1.7px;
+  }
 
-      color: var(--navy);
+  .hero-emblem{
+    width:75px;
+    height:75px;
+    font-size:36px;
+  }
 
-      padding-left: 30px;
-      padding-right: 30px;
-    }
+  .hero h1{
+    font-size:40px;
+  }
 
+  .hero-text{
+    font-size:18px;
+  }
 
-    /* =========================================================
-       FOOTER
-       ========================================================= */
+  .hero-actions{
+    flex-direction:column;
+    align-items:center;
+  }
 
-    footer {
-      background: var(--navy-dark);
+  .hero-button{
+    width:100%;
+    max-width:330px;
+  }
 
-      color: white;
+  h2{
+    font-size:32px;
+  }
 
-      text-align: center;
+  .path-card{
+    min-height:auto;
+  }
 
-      padding: 45px 20px;
-    }
+  .card{
+    padding:28px 23px;
+  }
 
+  .featured,
+  .diaspora{
+    padding:30px 23px;
+  }
 
-    footer p {
-      margin: 6px 0;
-      opacity: 0.9;
-    }
-
-
-    footer a {
-      color: var(--gold-light);
-    }
-
-
-    /* =========================================================
-       MOBILE
-       ========================================================= */
-
-    @media (max-width: 850px) {
-
-      .nav-links {
-        display: none;
-      }
-
-
-      header {
-        padding: 80px 20px 90px;
-      }
-
-
-      header h1 {
-        font-size: 45px;
-      }
-
-
-      .path-grid,
-      .cards {
-        grid-template-columns: 1fr;
-      }
-
-
-      .paths {
-        margin-top: -30px;
-      }
-
-
-      section {
-        padding: 65px 18px;
-      }
-
-
-      .diaspora {
-        padding: 32px 25px;
-      }
-
-    }
-
-
-    @media (max-width: 520px) {
-
-      header h1 {
-        font-size: 39px;
-      }
-
-
-      header p {
-        font-size: 18px;
-      }
-
-
-      h2 {
-        font-size: 31px;
-      }
-
-
-      .card {
-        padding: 28px 24px;
-      }
-
-
-      .complete {
-        padding: 32px 25px;
-      }
-
-    }
-
-  </style>
-
+}
+</style>
 </head>
-
 
 <body>
 
-
-<!-- =========================================================
+<!-- ==========================================================
      NAVIGATION
-     ========================================================= -->
+     ========================================================== -->
 
-<nav>
+<nav class="site-nav" aria-label="Main navigation">
 
   <div class="nav-inner">
 
-    <a class="brand"
-       href="#top">
+    <a href="#top"
+       class="brand nav-target"
+       data-target="top">
 
-      SANA
+      <span class="brand-mark">S</span>
 
-      <span>
-        LEARNING &amp; PUBLISHING
+      <span class="brand-copy">
+        <strong>SANA</strong>
+        <small>LEARNING &amp; PUBLISHING</small>
       </span>
 
     </a>
 
-
-    <div class="nav-links">
-
-      <a href="#learn">Learn</a>
-
-      <a href="#write">Write</a>
-
-      <a href="#publish">Publish</a>
-
-      <a href="#free">Free Resources</a>
-
-      <a href="#about">About</a>
-
-      <a href="#contact">Contact</a>
-
+    <div class="desktop-nav">
+      <a href="#learn" class="nav-target" data-target="learn">Learn</a>
+      <a href="#write" class="nav-target" data-target="write">Write</a>
+      <a href="#publish" class="nav-target" data-target="publish">Publish</a>
+      <a href="#free" class="nav-target" data-target="free">Free Resources</a>
+      <a href="#about" class="nav-target" data-target="about">About</a>
+      <a href="#contact"
+         class="nav-target contact-link"
+         data-target="contact">Contact</a>
     </div>
 
+    <button
+      type="button"
+      class="menu-button"
+      id="menuButton"
+      aria-label="Open navigation menu"
+      aria-expanded="false">
+      ☰
+    </button>
+
+  </div>
+
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#learn" class="nav-target" data-target="learn">Learn</a>
+    <a href="#write" class="nav-target" data-target="write">Write</a>
+    <a href="#publish" class="nav-target" data-target="publish">Publish</a>
+    <a href="#free" class="nav-target" data-target="free">Free Resources</a>
+    <a href="#about" class="nav-target" data-target="about">About</a>
+    <a href="#contact" class="nav-target" data-target="contact">Contact</a>
   </div>
 
 </nav>
 
-
-
-<!-- =========================================================
+<!-- ==========================================================
      HERO
-     ========================================================= -->
+     ========================================================== -->
 
-<header id="top">
+<header class="hero" id="top">
 
-  <div class="hero-label">
-    SANA · LEARNING &amp; PUBLISHING
-  </div>
+  <div class="hero-inner">
 
+    <div class="hero-emblem">S</div>
 
-  <h1>
-    Learn. Write.<br>
-    <span>Publish. Build.</span>
-  </h1>
-
-
-  <p>
-    Practical learning, professional writing and independent
-    publishing support — built in Europe and available worldwide.
-  </p>
-
-
-  <div class="hero-actions">
-
-    <a class="hero-button"
-       href="#learn">
-      Explore Learning
-    </a>
-
-
-    <a class="hero-button secondary"
-       href="#write">
-      Writing &amp; Publishing
-    </a>
-
-  </div>
-
-</header>
-
-
-
-<!-- =========================================================
-     THREE PATHS
-     ========================================================= -->
-
-<section class="paths">
-
-  <div class="container">
-
-    <div class="path-grid">
-
-
-      <div class="path">
-
-        <div class="path-number">
-          01
-        </div>
-
-        <h3>LEARN</h3>
-
-        <p>
-          Structured online learning designed to turn
-          reflection and knowledge into practical action.
-        </p>
-
-      </div>
-
-
-      <div class="path">
-
-        <div class="path-number">
-          02
-        </div>
-
-        <h3>WRITE</h3>
-
-        <p>
-          Professional CV, LinkedIn, business and speech
-          writing for an international audience.
-        </p>
-
-      </div>
-
-
-      <div class="path">
-
-        <div class="path-number">
-          03
-        </div>
-
-        <h3>PUBLISH</h3>
-
-        <p>
-          Practical support for independent authors
-          navigating the path from manuscript to marketplace.
-        </p>
-
-      </div>
-
-
+    <div class="hero-label">
+      SANA · LEARNING &amp; PUBLISHING
     </div>
 
-  </div>
+    <h1>
+      Learn. Write.<br>
+      <span>Publish. Build.</span>
+    </h1>
 
-</section>
-
-
-
-<!-- =========================================================
-     LEARN
-     ========================================================= -->
-
-<section id="learn">
-
-  <div class="container">
-
-    <div class="section-number">
-      01 · LEARN
-    </div>
-
-
-    <h2>SANA Learning</h2>
-
-
-    <p class="section-intro">
-      Structured programs for reflection, responsibility,
-      practical personal development and meaningful growth.
-      Learn at your own pace from anywhere.
+    <p class="hero-text">
+      Practical learning, professional writing and independent
+      publishing support — built in Europe and available worldwide.
     </p>
 
-
-    <div class="cards">
-
-
-      <!-- FOUNDATION -->
-
-      <div class="card">
-
-        <h3>Foundation</h3>
-
-        <p>
-          Build the foundation for meaningful personal
-          development through self-awareness,
-          responsibility and practical action.
-        </p>
-
-        <div class="price">
-          $79
-        </div>
-
-        <a class="button"
-           href="https://my.coursebox.ai/courses/01a0cf4c-6c16-7fcf-a48a-b961a62af8d2/about"
-           target="_blank"
-           rel="noopener noreferrer">
-
-          View Foundation
-
-        </a>
-
-      </div>
-
-
-
-      <!-- REFINEMENT -->
-
-      <div class="card">
-
-        <h3>Refinement</h3>
-
-        <p>
-          Deepen awareness and develop more conscious
-          responses to life, relationships and
-          difficult experiences.
-        </p>
-
-        <div class="price">
-          $160
-        </div>
-
-        <a class="button"
-           href="https://my.coursebox.ai/courses/01a0d313-8629-76e3-9c8b-7a0878f97dbf/about"
-           target="_blank"
-           rel="noopener noreferrer">
-
-          View Refinement
-
-        </a>
-
-      </div>
-
-
-
-      <!-- BUILDING -->
-
-      <div class="card">
-
-        <h3>Building</h3>
-
-        <p>
-          Turn personal development into conscious
-          action through responsibility, values,
-          meaning and contribution.
-        </p>
-
-        <div class="price">
-          $199
-        </div>
-
-        <a class="button"
-           href="https://my.coursebox.ai/courses/01a0d348-6807-7822-889a-6c331042f8b4/about"
-           target="_blank"
-           rel="noopener noreferrer">
-
-          View Building
-
-        </a>
-
-      </div>
-
-    </div>
-
-
-
-    <!-- COMPLETE PROGRAM -->
-
-    <div class="complete">
-
-      <span class="badge">
-        BEST VALUE · 33 LESSONS · 3 STAGES
-      </span>
-
-      <h3>
-        Complete SANA Program
-      </h3>
-
-      <p>
-        Follow the complete SANA Learning journey through
-        all three stages in one connected personal
-        development system.
-      </p>
-
-      <div class="price">
-        $299
-      </div>
-
-      <p>
-        Save $139 compared with purchasing all three
-        stages separately.
-      </p>
-
-      <a class="button"
-         href="https://my.coursebox.ai/courses/01a0cdae-8902-7f41-a488-683ee2006ee8/about"
-         target="_blank"
-         rel="noopener noreferrer">
-
-        Explore Complete Program
-
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     WRITE
-     ========================================================= -->
-
-<section id="write"
-         class="writing">
-
-  <div class="container">
-
-    <div class="section-number">
-      02 · WRITE
-    </div>
-
-
-    <h2>Professional Writing</h2>
-
-
-    <p class="section-intro">
-      Clear, individual writing support for professionals,
-      entrepreneurs and people building their next opportunity.
-      Services are available in English and Serbian.
-    </p>
-
-
-    <div class="cards">
-
-
-      <div class="card">
-
-        <h3>Professional CV / Resume</h3>
-
-        <p>
-          Professionally structured career presentation
-          designed for clarity, credibility and
-          international use.
-        </p>
-
-        <div class="price">
-          $59
-        </div>
-
-        <a class="button"
-           href="mailto:sana.learning.global@gmail.com?subject=Professional%20CV%20Request">
-
-          Request Service
-
-        </a>
-
-      </div>
-
-
-
-      <div class="card">
-
-        <h3>CV + LinkedIn</h3>
-
-        <p>
-          Professional CV or resume combined with a
-          structured LinkedIn profile for a consistent
-          professional presence.
-        </p>
-
-        <div class="price">
-          $105
-        </div>
-
-        <a class="button"
-           href="mailto:sana.learning.global@gmail.com?subject=CV%20and%20LinkedIn%20Request">
-
-          Request Service
-
-        </a>
-
-      </div>
-
-
-
-      <div class="card">
-
-        <h3>Executive Career Package</h3>
-
-        <p>
-          CV or resume, LinkedIn profile and cover letter
-          prepared as one coordinated professional package.
-        </p>
-
-        <div class="price">
-          $159
-        </div>
-
-        <a class="button"
-           href="mailto:sana.learning.global@gmail.com?subject=Executive%20Career%20Package">
-
-          Request Service
-
-        </a>
-
-      </div>
-
-
-
-      <div class="card">
-
-        <h3>Business Writing</h3>
-
-        <p>
-          Professional biographies, business content,
-          presentations and selected commercial
-          writing projects.
-        </p>
-
-        <div class="price">
-          From $59
-        </div>
-
-        <a class="button"
-           href="mailto:sana.learning.global@gmail.com?subject=Business%20Writing%20Request">
-
-          Request Service
-
-        </a>
-
-      </div>
-
-
-
-      <div class="card">
-
-        <h3>Speech Writing</h3>
-
-        <p>
-          Individual speeches and addresses shaped around
-          your audience, occasion, message and personal voice.
-        </p>
-
-        <div class="price">
-          From $79
-        </div>
-
-        <a class="button"
-           href="mailto:sana.learning.global@gmail.com?subject=Speech%20Writing%20Request">
-
-          Request Service
-
-        </a>
-
-      </div>
-
-
-
-      <div class="card">
-
-        <h3>Custom Writing Project</h3>
-
-        <p>
-          Have a writing project that does not fit a
-          standard package? Tell us what you need and
-          receive an individual proposal.
-        </p>
-
-        <div class="price">
-          Custom
-        </div>
-
-        <a class="button"
-           href="mailto:sana.le
+    <div class="hero-actions">
+
+      <a href="#learn"
+         class="hero-button nav-target"
+   

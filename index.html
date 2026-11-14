@@ -122,6 +122,15 @@ footer p{margin:5px}
 @media(max-width:850px){.desktop{display:none}.menu{display:block}.hero{min-height:auto}.hero h1{font-size:48px}.path-grid,.cards,.free-grid{grid-template-columns:1fr}.paths{margin-top:-35px}}
 @media(max-width:650px){.request-form{grid-template-columns:1fr;padding:25px 20px}.field.full,.form-note,.submit-btn{grid-column:1}.about h2{font-size:30px;line-height:1.2}}
 @media(max-width:520px){.container{width:calc(100% - 32px)}.nav-inner{padding:9px 17px}.hero h1{font-size:40px}.hero p{font-size:18px}.actions{flex-direction:column}.hero-btn{width:100%}h2{font-size:32px}}
+
+/* SANA Journal homepage addition — existing sections unchanged */
+#journal{background:linear-gradient(135deg,#eaf2ec,#f7f5ef)}
+.journal-feature{max-width:900px;margin:0 auto;padding:36px 38px;background:#fff;border:1px solid #102b3d1c;border-left:5px solid var(--gold);border-radius:16px;box-shadow:var(--shadow)}
+.journal-feature .journal-meta{font-size:12px;letter-spacing:1.4px;text-transform:uppercase;color:var(--g);font-weight:800}
+.journal-feature h3{font:500 31px Georgia;color:var(--n);margin:12px 0}
+.journal-feature p{color:var(--muted)}
+.journal-feature .button{max-width:290px}
+@media(max-width:650px){.journal-feature{padding:26px 22px}.journal-feature h3{font-size:27px}}
 </style>
 </head>
 <body>
@@ -130,14 +139,14 @@ footer p{margin:5px}
     <a class="brand" href="#top"><span class="mark">S</span><span><b>SANA</b><small>LEARNING &amp; PUBLISHING</small></span></a>
     <div class="desktop">
       <a href="#learn">Learn</a><a href="#write">Write</a><a href="#publish">Publish</a>
-      <a href="#shop">Shop</a><a href="#free">Free Resources</a><a href="#about">About</a>
+      <a href="#shop">Shop</a><a href="blog/">Blog</a><a href="#free">Free Resources</a><a href="#about">About</a>
       <a href="#request">Request</a><a href="#contact">Contact</a>
     </div>
     <button class="menu" id="menuButton" aria-label="Toggle menu" aria-controls="mobileNav" aria-expanded="false">☰</button>
   </div>
   <div class="mobile" id="mobileNav">
     <a href="#learn">Learn</a><a href="#write">Write</a><a href="#publish">Publish</a>
-    <a href="#shop">Shop</a><a href="#free">Free Resources</a><a href="#about">About</a>
+    <a href="#shop">Shop</a><a href="blog/">Blog</a><a href="#free">Free Resources</a><a href="#about">About</a>
     <a href="#request">Request</a><a href="#contact">Contact</a>
   </div>
 </nav>
@@ -152,6 +161,7 @@ footer p{margin:5px}
       <a class="hero-btn" href="#learn">Explore Learning</a>
       <a class="hero-btn alt" href="#shop">Books &amp; Digital Store</a>
       <a class="hero-btn alt" href="#write">Writing &amp; Publishing</a>
+      <a class="hero-btn alt" href="blog/">SANA Journal</a>
     </div>
   </div>
 </header>
@@ -251,6 +261,20 @@ footer p{margin:5px}
     </article>
   </div>
   <p class="store-note">Checkout, digital delivery, taxes where applicable, and order confirmation are handled by the relevant sales platform.</p>
+</div></section>
+
+
+<section id="journal" class="section"><div class="container">
+  <div class="section-num">SANA JOURNAL · IDEAS &amp; PERSPECTIVES</div>
+  <h2>Explore the SANA Journal</h2>
+  <p class="intro">Articles on learning, thoughtful writing, independent authorship and the questions shaping contemporary society — all within SANA Learning &amp; Publishing.</p>
+  <article class="journal-feature">
+    <div class="journal-meta">14 November 2026 · Editorial introduction</div>
+    <h3>Introducing the SANA Journal</h3>
+    <p>Meet SANA's editorial space, where ideas are examined with care and knowledge is distinguished from assumption. Read our introduction and explore the articles to come.</p>
+    <a class="button" href="blog/introducing-the-sana-journal.html">Read the first article</a>
+  </article>
+  <p class="store-note" style="text-align:center">Read more at <a href="blog/">SANA Journal</a>. Unpublished books and internal editorial files remain private.</p>
 </div></section>
 
 <section id="free" class="section free"><div class="container">

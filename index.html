@@ -123,6 +123,13 @@ footer p{margin:5px}
 @media(max-width:650px){.request-form{grid-template-columns:1fr;padding:25px 20px}.field.full,.form-note,.submit-btn{grid-column:1}.about h2{font-size:30px;line-height:1.2}}
 @media(max-width:520px){.container{width:calc(100% - 32px)}.nav-inner{padding:9px 17px}.hero h1{font-size:40px}.hero p{font-size:18px}.actions{flex-direction:column}.hero-btn{width:100%}h2{font-size:32px}}
 
+/* SANA Learning Compass — free course discovery */
+.compass-panel{margin:0 0 32px;padding:30px 34px;background:#fff;border:1px solid #102b3d1c;border-left:5px solid var(--gold);border-radius:16px;box-shadow:var(--shadow)}
+.compass-panel h3{font:500 30px Georgia;color:var(--n);margin:8px 0 12px}
+.compass-panel p{color:var(--muted);max-width:780px}
+.compass-panel .button{width:auto;max-width:100%;margin-top:20px;padding-left:25px;padding-right:25px}
+@media(max-width:650px){.compass-panel{padding:25px 22px}.compass-panel h3{font-size:27px}.compass-panel .button{width:100%}}
+
 /* SANA Journal homepage addition — existing sections unchanged */
 #journal{background:linear-gradient(135deg,#eaf2ec,#f7f5ef)}
 .journal-feature{max-width:900px;margin:0 auto;padding:36px 38px;background:#fff;border:1px solid #102b3d1c;border-left:5px solid var(--gold);border-radius:16px;box-shadow:var(--shadow)}
@@ -159,6 +166,7 @@ footer p{margin:5px}
     <p>Practical learning, professional writing and independent publishing support — built in Europe and available worldwide.</p>
     <div class="actions">
       <a class="hero-btn" href="#learn">Explore Learning</a>
+      <a class="hero-btn alt" href="https://sana-learning-compass.polsia.io" target="_blank" rel="noopener noreferrer" aria-label="Take the free SANA Learning Compass assessment (opens in a new tab)">Free Learning Compass</a>
       <a class="hero-btn alt" href="#shop">Books &amp; Digital Store</a>
       <a class="hero-btn alt" href="#write">Writing &amp; Publishing</a>
       <a class="hero-btn alt" href="blog/">SANA Journal</a>
@@ -175,6 +183,12 @@ footer p{margin:5px}
 <section id="learn" class="section"><div class="container">
   <div class="section-num">01 · LEARN</div><h2>SANA Learning</h2>
   <p class="intro">Structured programs for reflection, responsibility, practical personal development and meaningful growth. Learn at your own pace from anywhere.</p>
+  <aside class="compass-panel" id="compass" aria-label="Free SANA Learning Compass assessment">
+    <div class="section-num" style="text-align:left">FREE · 5-QUESTION ASSESSMENT</div>
+    <h3>Find Your SANA Learning Path</h3>
+    <p>Not sure which SANA program fits your learning goals? Take the free SANA Learning Compass assessment to explore Foundation, Refinement, Building and the Complete Program. Receive a suggested starting point and follow a direct link to its Coursebox page.</p>
+    <a class="button" href="https://sana-learning-compass.polsia.io" target="_blank" rel="noopener noreferrer" aria-label="Take the free SANA Learning Compass assessment (opens in a new tab)">Take the Free Assessment</a>
+  </aside>
   <div class="cards">
     <article class="card"><h3>Foundation</h3><p>Build the foundation for meaningful personal development through self-awareness, responsibility and practical action.</p><div class="price">$79</div><a class="button" target="_blank" rel="noopener noreferrer" href="https://my.coursebox.ai/courses/01a0cf4c-6c16-7fcf-a48a-b961a62af8d2/about">View Foundation</a></article>
     <article class="card"><h3>Refinement</h3><p>Deepen awareness and develop more conscious responses to life, relationships and difficult experiences.</p><div class="price">$160</div><a class="button" target="_blank" rel="noopener noreferrer" href="https://my.coursebox.ai/courses/01a0d313-8629-76e3-9c8b-7a0878f97dbf/about">View Refinement</a></article>
